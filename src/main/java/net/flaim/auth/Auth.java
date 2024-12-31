@@ -1,6 +1,7 @@
 package net.flaim.auth;
 
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
+import net.flaim.auth.commands.Login;
 import net.flaim.auth.commands.Register;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
@@ -21,7 +22,7 @@ public class Auth extends JavaPlugin {
         BukkitScheduler scheduler = this.getServer().getScheduler();
 
         this.getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS,
-                event -> event.registrar().register("log", new Register())
+                event -> event.registrar().register("log", new Login())
         );
         this.getLifecycleManager().registerEventHandler(LifecycleEvents.COMMANDS,
                 event -> event.registrar().register("reg", new Register())
