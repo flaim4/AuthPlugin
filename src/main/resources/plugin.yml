@@ -1,0 +1,4 @@
+name: Auth
+version: '1.0-SNAPSHOT'
+main: net.flaim.auth.Auth
+api-version: '1.21'
